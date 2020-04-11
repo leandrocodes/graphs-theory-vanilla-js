@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Sniglet');
+
+body{
+	text-align: center;
+	font-family: 'Sniglet';
+	background-color: #263238;
+	color: #AED581;
+}
+
+input{
+	width: 100px;
+	padding: .8em;
+	font-size: .8em;
+	border-radius: .5em;
+}
+
+.form {
+  width: 50vw;
+  margin-left: 25vw;
+}
+
+button{
+	padding: 1em;
+	font-size: .8em;
+	border-radius: .5em;
+	background-color: #ECEFF1;
+	border: none;
+	color: #263238;
+	transition: .2s ease-in-out;
+	cursor: pointer;
+}
+button:hover{
+	background-color: #0097A7;
+	border: none;
+	color: #000000;
+	transition: .2s ease-in-out;
+}
+
+.button{
+	padding: 1em;
+	font-size: .8em;
+	border-radius: .5em;
+	background-color: #ECEFF1;
+	border: none;
+	color: #263238;
+	transition: .2s ease-in-out;
+	cursor: pointer;
+}
+
+.button:hover{
+	background-color: #0097A7;
+	border: none;
+	color: #000000;
+	transition: .2s ease-in-out;
+}
