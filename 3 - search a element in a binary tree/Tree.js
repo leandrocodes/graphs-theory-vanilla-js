@@ -87,7 +87,28 @@ class Tree {
 		}
 	}
 
+	search(data) {
+
+		let current = this.root;
+
+		while (current) {
+			if (data === current.data) {
+				document.getElementById("msg").innerHTML = `O elemento está na lista`;
+				return true;
+			}
+			if (data < current.data) {
+				current = current.left;
+			} else {
+				current = current.right;
+			}
+		}
+		document.getElementById("msg").innerHTML = `O elemento não está na lista`;
+		return false;
+	}
 }
+
+
+
 
 const tree = new Tree();
 
@@ -95,6 +116,13 @@ function insert() {
 	var value = document.getElementById('value').value;
 	tree.add(value);
 	document.getElementById("value").value = "";
+}
+
+function busca() {
+	var value = document.getElementById('busca').value;
+	tree.search(value);
+	document.getElementById('busca').value = "";
+
 }
 
 function printEmOrdem() {
@@ -109,15 +137,12 @@ function printPosOrdem() {
 	document.getElementById("msg").innerHTML = `Em pós-ordem: ${tree.posOrdem()}`;
 }
 
-/* tree.add(15);
-	tree.add(10);
-	tree.add(11);
-	tree.add(7);
-	tree.add(20);
-	tree.add(22);
-	tree.add(16);
- */
-/* 	console.log(`Ordem simétrica: ${tree.ordemSimetrica()}`);
+/* tree.add(10);
+tree.add(9);
+tree.add(11);
+
+	console.log(`Ordem simétrica: ${tree.ordemSimetrica()}`);
 	console.log(`Pré Ordem: ${tree.preOrdem()}`);
 	console.log(`Pós Ordem: ${tree.posOrdem()}`);
+
  */
